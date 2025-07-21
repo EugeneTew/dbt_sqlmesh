@@ -1,0 +1,7 @@
+shipment_id,order_id,shipping_provider,shipment_date,status
+3001,2001,DHL Express,2024-03-16,Delivered
+3002,2002,Pos Laju,2024-01-23,Delivered
+3003,2003,J&T Express,2024-05-11,Delivered
+3004,2004,FedEx,2024-04-04,Delivered
+3005,2006,Pos Laju,2024-02-29,Delivered
+3006,2007,J&T Express,2024-07-06,Delivered

@@ -1,0 +1,12 @@
+tracking_id,shipment_id,hub_location,status_update,timestamp,personnel_id
+6001,3001,Shah Alam National Hub,Arrived at sorting facility,2024-03-16 08:15:22,
+6002,3001,Petaling Jaya Hub,Processed and ready for delivery,2024-03-17 07:00:51,
+6003,3001,Petaling Jaya Hub,Out for delivery,2024-03-17 09:05:15,501
+6004,3001,Delivered,Package successfully delivered to customer,2024-03-17 11:45:03,501
+6005,3003,Shah Alam National Hub,Arrived at sorting facility,2024-05-11 10:20:00,
+6006,3003,KL Sentral Hub,Processed and ready for delivery,2024-05-12 06:45:30,
+6007,3003,KL Sentral Hub,Out for delivery,2024-05-12 09:30:00,502
+6008,3003,Delivered,Package successfully delivered to customer,2024-05-12 13:10:49,502
+6009,3002,Shah Alam National Hub,Arrived at sorting facility,2024-01-23 11:00:00,
+6010,3002,Petaling Jaya Hub,Out for delivery,2024-01-24 08:55:19,503
+6011,3002,Delivered,Package successfully delivered to customer,2024-01-24 10:33:00,503
