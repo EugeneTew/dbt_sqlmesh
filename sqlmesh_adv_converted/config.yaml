@@ -1,0 +1,14 @@
+default_gateway: local
+gateways:
+  local:
+    connection:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: password
+      port: 5432
+      database: dbt_sqlmesh
+model_defaults:
+  dialect: postgres
+  start: '2024-01-01'
+

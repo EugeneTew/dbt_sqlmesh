@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_data # An arbitrary name for the group of sources
+    schema: "{{ target.schema }}" # This will use the schema from your profiles.yml
+    tables:
+      - name: raw_customers
+      - name: raw_products
+      - name: raw_orders

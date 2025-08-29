@@ -1,0 +1,9 @@
+ticket_id,customer_id,order_id,issue_type,ticket_description,date_created,status
+4001,1002,2002,Damaged Item,The stainless steel water bottle arrived with a large dent.,2024-01-28,Resolved
+4002,1001,2001,Shipment Delay,Tracking has not updated in over 3 days.,2024-03-20,Closed
+4003,1003,2007,Wrong Item,I received a yoga mat instead of the resistance bands set.,2024-07-15,In Progress
+4004,1005,2004,Product Not Working,The desk lamp flickers constantly when turned on.,2024-04-10,Resolved
+4005,1001,2009,Payment Query,Was I charged for express shipping? I selected standard.,2024-08-22,Closed
+4006,1002,2014,General Inquiry,What is the material of the dinner plate set?,2024-10-06,Closed
+4007,1005,2016,Damaged Item,The box was crushed and two of the three candles were broken.,2024-06-11,Resolved
+4008,1003,2019,Shipment Delay,The package is still in transit and it is past the estimated delivery date.,2024-02-20,In Progress

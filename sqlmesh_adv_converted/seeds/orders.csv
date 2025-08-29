@@ -1,0 +1,21 @@
+order_id,customer_id,item,item_category,price,purchase_units,purchase_date
+2001,1001,Wireless Headphones,Electronics,89.99,1,2024-03-15
+2002,1002,Stainless Steel Water Bottle,Kitchenware,24.5,2,2024-01-22
+2003,1003,Yoga Mat,Fitness,35.75,1,2024-05-10
+2004,1005,Desk Lamp,Home Decor,45.2,1,2024-04-03
+2005,1001,Smartphone Stand,Electronics,12.99,3,2024-06-18
+2006,1002,Ceramic Coffee Mug,Kitchenware,15.8,4,2024-02-28
+2007,1003,Resistance Bands Set,Fitness,29.95,2,2024-07-05
+2008,1005,Throw Pillow,Home Decor,22.4,2,2024-01-14
+2009,1001,Bluetooth Speaker,Electronics,64.99,1,2024-08-21
+2010,1002,Cutting Board Set,Kitchenware,32.6,1,2024-09-30
+2011,1003,Jump Rope,Fitness,18.3,1,2024-03-08
+2012,1005,Wall Clock,Home Decor,28.75,1,2024-05-25
+2013,1001,Phone Charger,Electronics,19.99,2,2024-11-12
+2014,1002,Dinner Plate Set,Kitchenware,55,1,2024-10-07
+2015,1003,Dumbbells (5kg),Fitness,42.5,1,2024-04-19
+2016,1005,Candles (Pack of 3),Home Decor,16.9,3,2024-06-02
+2017,1001,Laptop Sleeve,Electronics,34.25,1,2024-07-27
+2018,1002,Measuring Cups,Kitchenware,14.95,2,2024-12-01
+2019,1003,Foam Roller,Fitness,26.8,1,2024-02-11
+2020,1005,Photo Frame,Home Decor,19.99,1,2024-08-09
