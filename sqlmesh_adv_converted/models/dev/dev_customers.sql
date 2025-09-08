@@ -20,4 +20,3 @@ select
     ,birthday
     ,register_date
 from dbt_adv.customers
--- where register_date >= '{{ start }}'; -- Use the 'start' variable from config.yaml
