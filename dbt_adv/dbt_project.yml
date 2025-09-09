@@ -4,9 +4,15 @@
 # name or the intended use of these models
 name: 'dbt_adv'
 version: '1.0.0'
+# comment out the following line if you are not using dbt Cloud ##
+dbt-cloud:
+    project-id: # Your Project ID
+##################################################################
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'dbt_adv'
+# profile: 'dbt_adv'
+profile: 'dbt_snowflake'
+
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
