@@ -6,7 +6,7 @@ name: 'dbt_adv'
 version: '1.0.0'
 # comment out the following line if you are not using dbt Cloud ##
 dbt-cloud:
-    project-id: # Your Project ID
+    project-id:  70471823502666
 ##################################################################
 
 # This setting configures which "profile" dbt uses for this project.
