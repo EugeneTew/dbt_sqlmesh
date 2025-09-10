@@ -1,14 +1,14 @@
 MODEL (
   name models.dev_delivery_status,
   kind FULL,
-  columns (
-    tracking_id INT
-    ,shipment_id INT
-    ,hub_location VARCHAR
-    ,status_update VARCHAR
-    ,timestamp TIMESTAMP
-    ,personnel_id INT
-  )
+  -- columns (
+  --   tracking_id INT
+  --   ,shipment_id INT
+  --   ,hub_location VARCHAR
+  --   ,status_update VARCHAR
+  --   ,timestamp TIMESTAMP
+  --   ,personnel_id INT
+  -- )
 );
 
 select
@@ -18,4 +18,4 @@ select
     ,status_update
     ,timestamp
     ,personnel_id
-from dbt_adv.delivery_status
+from sqlmesh_adv.delivery_status
