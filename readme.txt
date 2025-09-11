@@ -1,70 +1,111 @@
-This is a documentation of DBT and SQLMesh practices. 
-The project is created locally using PostgreSQL with Docker.
-Step-to-step setup for PostgreSQL and Virtual Environment are documented under this readme.txt.
+# dbt & sqlmesh projects
 
-Pre-requirements:
-- Installed Docker 
-- Installed Python3
+A hands-on project for demonstrating and comparing data transformation workflows using dbt and SQLMesh. 
+All examples are designed to run locally using PostgreSQL in a Docker container.
 
----------------------------------------------------------------------------------------------------
-PostgreSQL Setup
----------------------------------------------------------------------------------------------------
-[1] To start a PostgreSQL container in docker, run the command:
+## Overview
+
+This repository serves as a practical guide to different data engineering practices. It contains several sub-projects that showcase:
+- A standalone dbt project.
+- A standalone SQLMesh project.
+- A dbt project that has been converted to and is managed by SQLMesh.
+
+The goal is to provide a clear, step-by-step guide to setting up the environment and exploring the capabilities of each tool.
+
+## 🚀 Getting Started
+
+Follow these instructions to set up your local development environment, including a PostgreSQL database and the necessary Python tools.
+
+### Prerequisites
+
+You must have the following software installed on your machine:
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Python 3.8+
+
+---
+
+### **Step 1: Set Up PostgreSQL with Docker**
+
+This will create a persistent PostgreSQL container named `pg_comparison` that you can connect to.
+
+1.  **Start the PostgreSQL container:**
+    Open your terminal and run the following command. This will download the `postgres:15` image if you don't have it and start the container.
+    ```bash
     docker run --name pg_comparison -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres:15
+    ```
 
-[2] To double confirm if the container is running, you can check docker list by command: 
+2.  **Verify the container is running:**
+    ```bash
     docker ps
+    ```
+    You should see `pg_comparison` in the list of running containers.
 
-[3] Run the following command to connect to Postgres:
+3.  **Connect to the PostgreSQL instance:**
+    This command opens an interactive `psql` shell inside your running container.
+    ```bash
     docker exec -it pg_comparison psql -U postgres
+    ```
 
-[4] Once in the Postgres Interface, create the database with command:
-    CREATE DATABASE dbt_sqlmesh
+4.  **Create the project database:**
+    Once inside the `psql` shell, run the following SQL command:
+    ```sql
+    CREATE DATABASE dbt_sqlmesh;
+    ```
 
-[5] To show the list of databases, input the command:
-    \l or \list
+5.  **Confirm the database was created:**
+    Use the `\l` command to list all databases. Ensure `dbt_sqlmesh` is on the list.
+    ```sql
+    \l
+    ```
+    You can now type `\q` to exit the `psql` shell.
 
-Ensure that Database dbt_sqlmesh is present on the list.
+---
 
+### **Step 2: Set Up the Python Environment**
 
----------------------------------------------------------------------------------------------------
-DBT venv Setup
----------------------------------------------------------------------------------------------------
-[1] To create a virtual environment, use the following command:
-    python3 -m venv {your folder path}
-    (i.e. python3 -m venv ~/venvs/dbt_env)
+> **Note:** Instead of creating separate environments for dbt and SQLMesh, we will create a single, unified environment. This is a best practice, as SQLMesh is designed to act as a runner and manager for dbt projects.
 
-[2] Activate the virtual environment by:
-    source {your folder path}/bin/activate
-    (i.e. source ~/venvs/dbt_env/bin/activate)
+1.  **Create a virtual environment:**
+    From your project's root directory, run the following command. This creates a `venv` folder within your project.
+    ```bash
+    python3 -m venv venv
+    ```
 
-[3] Install the required DBT packages needed by project:
-    pip install dbt-postgres
+2.  **Activate the virtual environment:**
+    ```bash
+    source venv/bin/activate
+    ```
+    Your terminal prompt should now be prefixed with `(venv)`.
 
-[4] To deactivate the virtual environment, use the following command:
+3.  **Install all required packages:**
+    Each sub-project has its own list of dependencies. Run the following commands from the root directory to install all necessary packages into your single virtual environment.
+    ```bash
+    [ dbt related projects ]
+        pip install -r dbt_adv/requirements.txt
+
+    [ sqlmesh related projects ]
+        pip install -r sqlmesh_adv_converted/requirements.txt
+    ```
+    *This ensures that all packages needed for any of the examples are available in your environment.*
+
+4.  **Deactivating the virtual environment:**
+    When you are finished working, you can deactivate the environment with:
+    ```bash
     deactivate
+    ```
 
+---
 
----------------------------------------------------------------------------------------------------
-SQLMesh venv Setup
----------------------------------------------------------------------------------------------------
-[1] To create a virtual environment, use the following command:
-    python3 -m venv {your folder path}
-    (i.e. python3 -m venv ~/venvs/sqlmesh_env)
+## 📂 Exploring the Project Examples
 
-[2] Activate the virtual environment by:
-    source {your folder path}/bin/activate
-    (i.e. source ~/venvs/sqlmesh_env/bin/activate)
+After successfully setting up your database and Python environment, you are ready to explore the example projects. Each folder contains a standalone project with its own `README.md` file with further instructions.
 
-[3] Install the required DBT packages needed by project:
-    pip install sqlmesh psycopg2-binary
+Navigate into each directory to see how it works:
 
-[4] To deactivate the virtual environment, use the following command:
-    deactivate
+- **`dbt_adv`**: A standard dbt project.
+- **`sqlmesh_ver`**: A project built from scratch using only SQLMesh.
+- **`sqlmesh_adv_converted`**: The `dbt_adv` project after being converted and managed by SQLMesh.
 
+For each project, follow the instructions in its local `README.md` file to run and test the transformations.
 
----------------------------------------------------------------------------------------------------
-After finish the setup of Postgres and Virtual Environment, follow the steps in the README.md under each of the following folders to recreate the projects locally:
-[1] dbt_adv
-[2] dbt_ver
-[3] sqlmesh_ver
+Ignore `dbt_ver` and `sqlmesh_adv` as those are testing projects.
