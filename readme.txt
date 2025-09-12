@@ -98,14 +98,13 @@ This will create a persistent PostgreSQL container named `pg_comparison` that yo
 
 ## 📂 Exploring the Project Examples
 
-After successfully setting up your database and Python environment, you are ready to explore the example projects. Each folder contains a standalone project with its own `README.md` file with further instructions.
+After successfully setting up your database and Python environment, you are ready to explore the example projects. Each folder contains a standalone project with its own `readme.md` file with further instructions.
 
 Navigate into each directory to see how it works:
 
-- **`dbt_adv`**: A standard dbt project.
-- **`sqlmesh_ver`**: A project built from scratch using only SQLMesh.
+- **`dbt_adv`**: An upgrade on 'dbt_ver' project to enlarge the dependancies.
+- **`dbt_ver`**: A standard dbt project which contain only 1 model for short demo.
 - **`sqlmesh_adv_converted`**: The `dbt_adv` project after being converted and managed by SQLMesh.
+- **`sqlmesh_ver`**: A standard sqlmesh project which contain only 2 models for short demo.
 
-For each project, follow the instructions in its local `README.md` file to run and test the transformations.
-
-Ignore `dbt_ver` and `sqlmesh_adv` as those are testing projects.
+For each project, follow the instructions in its local `readme.md` file to run and test the transformations.
